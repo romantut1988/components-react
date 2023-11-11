@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
+import {StyleBtn, SuperButton} from "./components/Button.styled";
+import {Link} from "./components/Link.styled";
+import {Menu} from "./components/Menu.styled";
 
 function App() {
     return (
@@ -23,35 +26,6 @@ function App() {
 
 export default App;
 
-const StyleBtn = styled.button`
-  border: none;
-  background-color: #fb3f78;
-  padding: 10px 20px;
-  color: snow;
-  font-size: 2rem;
-  font-weight: bold;
-
-  &:hover {
-    background-color: #3ffb97;
-  }
-
-  &:last-child {
-    background-color: #d9213d;
-  }
-`
-const Link = styled.a`
-  color: aqua;
-  font-size: 2rem;
-  font-weight: bold;
-  padding: 0;
-  background-color: transparent;
-`
-
-const SuperButton = styled(StyleBtn)`
-  border-radius: 5px;
-  background-color: chartreuse;
-  color: slategrey;
-`
 
 const Box = styled.div`
   display: flex;
@@ -67,20 +41,11 @@ const Box = styled.div`
   ${Link} {
     cursor: zoom-in;
   }
+  
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+  }
+
 `
 
-const Menu = styled.nav`
-  ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    
-    li > a {
-      color: green;
-    }
-    
-    li + li {
-      margin-left: 20px;
-    }
-  }
-`
+
