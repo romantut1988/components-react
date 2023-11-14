@@ -8,10 +8,7 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
-
-  body {
-    background-color: #131313;
-  }
+  
 
   body {
     margin: 0;
